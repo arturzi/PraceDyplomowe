@@ -106,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -125,6 +124,10 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="ListaPracDyplomowych.aspx" />
+    <Content Include="ListaPracownikow.aspx" />
+    <Content Include="ListaSlowKluczowych.aspx" />
+    <Content Include="ListaStudentow.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -169,13 +172,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -185,6 +181,34 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPracDyplomowych.aspx.cs">
+      <DependentUpon>ListaPracDyplomowych.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaPracDyplomowych.aspx.designer.cs">
+      <DependentUpon>ListaPracDyplomowych.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPracownikow.aspx.cs">
+      <DependentUpon>ListaPracownikow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaPracownikow.aspx.designer.cs">
+      <DependentUpon>ListaPracownikow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaSlowKluczowych.aspx.cs">
+      <DependentUpon>ListaSlowKluczowych.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaSlowKluczowych.aspx.designer.cs">
+      <DependentUpon>ListaSlowKluczowych.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaStudentow.aspx.cs">
+      <DependentUpon>ListaStudentow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaStudentow.aspx.designer.cs">
+      <DependentUpon>ListaStudentow.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
