@@ -20,7 +20,7 @@
         </td>
     </tr>
 
-    <asp:SqlDataSource ID="PraceDyplomoweDS" runat="server" ConnectionString="<%$ ConnectionStrings:PraceDyplomoweCS %>" SelectCommand="SELECT [Poziom_studiow], [Temat_pracy], [Kierunek_studiow] FROM [Praca_dyplomowa] WHERE (([Poziom_studiow] LIKE '%' + @Poziom_studiow + '%') AND ([Temat_pracy] LIKE '%' + @Temat_pracy + '%')) ORDER BY [Poziom_studiow], [Temat_pracy]">
+    <asp:SqlDataSource ID="PraceDyplomoweDS" runat="server" ConnectionString="<%$ ConnectionStrings:PraceDyplomoweCS %>" SelectCommand="SELECT [Poziom_studiow], [Temat_pracy], [Kierunek_studiow], [ID_pracy] FROM [Praca_dyplomowa] WHERE (([Poziom_studiow] LIKE '%' + @Poziom_studiow + '%') AND ([Temat_pracy] LIKE '%' + @Temat_pracy + '%')) ORDER BY [Poziom_studiow], [Temat_pracy]">
         <SelectParameters>
             <asp:ControlParameter ControlID="TBPoziom" Name="Poziom_studiow" PropertyName="Text" Type="String" DefaultValue="%" />
             <asp:ControlParameter ControlID="TBTytul" DefaultValue="%" Name="Temat_pracy" PropertyName="Text" Type="String" />
@@ -30,6 +30,9 @@
             <asp:ListView ID="ListView1" runat="server" DataSourceID="PraceDyplomoweDS">
                 <AlternatingItemTemplate>
                     <tr style="background-color:#FFF8DC;">
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "~/SzczegolyPracyDyplomowej.aspx?ID_pracy="+Eval("ID_pracy") %>'>-></asp:HyperLink>
+                        </td>
                         <td>
                             <asp:Label ID="Poziom_studiowLabel" runat="server" Text='<%# Eval("Poziom_studiow") %>' />
                         </td>
@@ -41,23 +44,6 @@
                         </td>
                     </tr>
                 </AlternatingItemTemplate>
-                <EditItemTemplate>
-                    <tr style="background-color:#008A8C;color: #FFFFFF;">
-                        <td>
-                            <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
-                            <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
-                        </td>
-                        <td>
-                            <asp:TextBox ID="Poziom_studiowTextBox" runat="server" Text='<%# Bind("Poziom_studiow") %>' />
-                        </td>
-                        <td>
-                            <asp:TextBox ID="Temat_pracyTextBox" runat="server" Text='<%# Bind("Temat_pracy") %>' />
-                        </td>
-                        <td>
-                            <asp:TextBox ID="Kierunek_studiowTextBox" runat="server" Text='<%# Bind("Kierunek_studiow") %>' />
-                        </td>
-                    </tr>
-                </EditItemTemplate>
                 <EmptyDataTemplate>
                     <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
                         <tr>
@@ -65,25 +51,11 @@
                         </tr>
                     </table>
                 </EmptyDataTemplate>
-                <InsertItemTemplate>
-                    <tr style="">
-                        <td>
-                            <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
-                            <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
-                        </td>
-                        <td>
-                            <asp:TextBox ID="Poziom_studiowTextBox" runat="server" Text='<%# Bind("Poziom_studiow") %>' />
-                        </td>
-                        <td>
-                            <asp:TextBox ID="Temat_pracyTextBox" runat="server" Text='<%# Bind("Temat_pracy") %>' />
-                        </td>
-                        <td>
-                            <asp:TextBox ID="Kierunek_studiowTextBox" runat="server" Text='<%# Bind("Kierunek_studiow") %>' />
-                        </td>
-                    </tr>
-                </InsertItemTemplate>
                 <ItemTemplate>
                     <tr style="background-color:#DCDCDC;color: #000000;">
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "~/SzczegolyPracyDyplomowej.aspx?ID_pracy="+Eval("ID_pracy") %>'>-></asp:HyperLink>
+                        </td>
                         <td>
                             <asp:Label ID="Poziom_studiowLabel" runat="server" Text='<%# Eval("Poziom_studiow") %>' />
                         </td>
@@ -101,6 +73,7 @@
                             <td runat="server">
                                 <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
                                     <tr runat="server" style="background-color:#DCDCDC;color: #000000;">
+                                        <th runat="server">Szczegóły pracy</th>
                                         <th runat="server">Poziom studiów</th>
                                         <th runat="server">Temat pracy</th>
                                         <th runat="server">Kierunek studiów</th>
@@ -115,19 +88,6 @@
                         </tr>
                     </table>
                 </LayoutTemplate>
-                <SelectedItemTemplate>
-                    <tr style="background-color:#008A8C;font-weight: bold;color: #FFFFFF;">
-                        <td>
-                            <asp:Label ID="Poziom_studiowLabel" runat="server" Text='<%# Eval("Poziom_studiow") %>' />
-                        </td>
-                        <td>
-                            <asp:Label ID="Temat_pracyLabel" runat="server" Text='<%# Eval("Temat_pracy") %>' />
-                        </td>
-                        <td>
-                            <asp:Label ID="Kierunek_studiowLabel" runat="server" Text='<%# Eval("Kierunek_studiow") %>' />
-                        </td>
-                    </tr>
-                </SelectedItemTemplate>
             </asp:ListView>
             <br />
             <br />
