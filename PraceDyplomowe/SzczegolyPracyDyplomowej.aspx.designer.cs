@@ -69,13 +69,13 @@ namespace PraceDyplomowe
         protected global::System.Web.UI.WebControls.SqlDataSource DSSlowaKluczowe;
 
         /// <summary>
-        /// DataList2 control.
+        /// GridView5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList2;
+        protected global::System.Web.UI.WebControls.GridView GridView5;
 
         /// <summary>
         /// Label3 control.

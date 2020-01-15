@@ -29,7 +29,7 @@
 <br /><br />
             <asp:ListView ID="ListView1" runat="server" DataSourceID="PraceDyplomoweDS">
                 <AlternatingItemTemplate>
-                    <tr style="background-color:#FFF8DC;">
+                    <tr style="background-color:white;color:#284775">
                         <td style="text-align:center">
                             <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "~/SzczegolyPracyDyplomowej.aspx?ID_pracy="+Eval("ID_pracy") %>'>-></asp:HyperLink>
                         </td>
@@ -41,6 +41,9 @@
                         </td>
                         <td>
                             <asp:Label ID="Kierunek_studiowLabel" runat="server" Text='<%# Eval("Kierunek_studiow") %>' />
+                        </td>
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/DodajAutora.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
                         </td>
                     </tr>
                 </AlternatingItemTemplate>
@@ -52,7 +55,7 @@
                     </table>
                 </EmptyDataTemplate>
                 <ItemTemplate>
-                    <tr style="background-color:#DCDCDC;color: #000000;">
+                    <tr style="background-color:#F7F6F3;color: 333333;">
                         <td style="text-align:center">
                             <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "~/SzczegolyPracyDyplomowej.aspx?ID_pracy="+Eval("ID_pracy") %>'>-></asp:HyperLink>
                         </td>
@@ -65,6 +68,9 @@
                         <td>
                             <asp:Label ID="Kierunek_studiowLabel" runat="server" Text='<%# Eval("Kierunek_studiow") %>' />
                         </td>
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl='<%# "~/DodajAutora.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
+                        </td>
                     </tr>
                 </ItemTemplate>
                 <LayoutTemplate>
@@ -72,11 +78,12 @@
                         <tr runat="server">
                             <td runat="server">
                                 <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                    <tr runat="server" style="background-color:#DCDCDC;color: #000000;">
+                                    <tr runat="server" style="background-color:#5D7B9D;color: white;">
                                         <th runat="server">Szczegóły pracy</th>
                                         <th runat="server">Poziom studiów</th>
                                         <th runat="server">Temat pracy</th>
                                         <th runat="server">Kierunek studiów</th>
+                                        <th runat="server">Dodaj autora</th>
                                     </tr>
                                     <tr id="itemPlaceholder" runat="server">
                                     </tr>
