@@ -45,6 +45,18 @@
                         <td style="text-align:center">
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/DodajAutora.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
                         </td>
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl='<%# "~/DodajRecenzenta.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
+                        </td>
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl='<%# "~/DodajRecenzje.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
+                        </td>
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl='<%# "~/DodajOcenePromotora.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
+                        </td>
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl='<%# "~/DodajEgzamin.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
+                        </td>
                     </tr>
                 </AlternatingItemTemplate>
                 <EmptyDataTemplate>
@@ -71,6 +83,18 @@
                         <td style="text-align:center">
                             <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl='<%# "~/DodajAutora.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
                         </td>
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl='<%# "~/DodajRecenzenta.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
+                        </td>
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl='<%# "~/DodajRecenzje.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
+                        </td>
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl='<%# "~/DodajOcenePromotora.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
+                        </td>
+                        <td style="text-align:center">
+                            <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl='<%# "~/DodajEgzamin.aspx?ID_pracy="+Eval("ID_pracy") %>'>+</asp:HyperLink>
+                        </td>
                     </tr>
                 </ItemTemplate>
                 <LayoutTemplate>
@@ -84,6 +108,10 @@
                                         <th runat="server">Temat pracy</th>
                                         <th runat="server">Kierunek studiów</th>
                                         <th runat="server">Dodaj autora</th>
+                                        <th runat="server">Dodaj recenzenta</th>
+                                        <th runat="server">Wykonaj recenzję</th>
+                                        <th runat="server">Wykonaj ocenę promotora</th>
+                                        <th runat="server">Egzamin</th>
                                     </tr>
                                     <tr id="itemPlaceholder" runat="server">
                                     </tr>

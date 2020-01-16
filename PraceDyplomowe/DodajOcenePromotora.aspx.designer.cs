@@ -11,7 +11,7 @@ namespace PraceDyplomowe
 {
 
 
-    public partial class DodajRecenzenta
+    public partial class DodajOcenePromotora
     {
 
         /// <summary>
@@ -24,30 +24,57 @@ namespace PraceDyplomowe
         protected global::System.Web.UI.WebControls.Label l1;
 
         /// <summary>
-        /// DSPracownicy control.
+        /// DSPrace control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DSPracownicy;
+        protected global::System.Web.UI.WebControls.SqlDataSource DSPrace;
 
         /// <summary>
-        /// GVPracownicy control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GVPracownicy;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Label1 control.
+        /// RadioOcena control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioOcena;
+
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+
+        /// <summary>
+        /// TxtKomentarz control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtKomentarz;
+
+        /// <summary>
+        /// BtZapisz control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtZapisz;
     }
 }

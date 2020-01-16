@@ -113,7 +113,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="DodajAutora.aspx" />
+    <Content Include="DodajEgzamin.aspx" />
+    <Content Include="DodajOcenePromotora.aspx" />
+    <Content Include="DodajPraceDyplomowa.aspx" />
     <Content Include="DodajRecenzenta.aspx" />
+    <Content Include="DodajRecenzje.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -189,12 +193,40 @@
     <Compile Include="DodajAutora.aspx.designer.cs">
       <DependentUpon>DodajAutora.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DodajEgzamin.aspx.cs">
+      <DependentUpon>DodajEgzamin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DodajEgzamin.aspx.designer.cs">
+      <DependentUpon>DodajEgzamin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DodajOcenePromotora.aspx.cs">
+      <DependentUpon>DodajOcenePromotora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DodajOcenePromotora.aspx.designer.cs">
+      <DependentUpon>DodajOcenePromotora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DodajPraceDyplomowa.aspx.cs">
+      <DependentUpon>DodajPraceDyplomowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DodajPraceDyplomowa.aspx.designer.cs">
+      <DependentUpon>DodajPraceDyplomowa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DodajRecenzenta.aspx.cs">
       <DependentUpon>DodajRecenzenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DodajRecenzenta.aspx.designer.cs">
       <DependentUpon>DodajRecenzenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DodajRecenzje.aspx.cs">
+      <DependentUpon>DodajRecenzje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DodajRecenzje.aspx.designer.cs">
+      <DependentUpon>DodajRecenzje.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

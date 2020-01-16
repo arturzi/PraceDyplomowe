@@ -13,5 +13,14 @@ namespace PraceDyplomowe
         {
 
         }
+
+        protected void GVPracownicy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string ID_Pracy = Request.QueryString["ID_pracy"];
+            string ID_Pracownika = GVPracownicy.SelectedRow.Cells[1].Text;
+            DSPracownicy.InsertCommand = "exec uspDodajRecenzenta " + ID_Pracy + "," + ID_Pracownika;
+            DSPracownicy.Insert();
+            Label1.Text = "Pracownik o identyfikatorze " + ID_Pracownika + " dodany jako recenzent do pracy " + ID_Pracy;
+        }
     }
 }
