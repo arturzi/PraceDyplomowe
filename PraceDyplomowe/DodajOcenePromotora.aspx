@@ -4,6 +4,7 @@
     <asp:SqlDataSource ID="DSPrace" runat="server" ConnectionString="<%$ ConnectionStrings:PraceDyplomoweCS %>" SelectCommand="SELECT * FROM [Praca_dyplomowa]"></asp:SqlDataSource>
     <br /><br />
     <asp:Label ID="Label3" runat="server" Text="Ocena promotora:"></asp:Label>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="RadioOcena" ErrorMessage="Proszę wybrać ocenę."></asp:RequiredFieldValidator>
     <br />
     <asp:RadioButtonList ID="RadioOcena" runat="server" Height="119px" Width="101px">
             <asp:ListItem>2</asp:ListItem>

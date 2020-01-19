@@ -47,12 +47,12 @@ ORDER BY dbo.Student.Nazwisko">
        <asp:RadioButtonList ID="RadioOcena" runat="server" Height="119px" Width="101px">
            <asp:ListItem>2</asp:ListItem>
            <asp:ListItem>3</asp:ListItem>
-           <asp:ListItem>4</asp:ListItem>
+           <asp:ListItem Selected="True">4</asp:ListItem>
            <asp:ListItem>5</asp:ListItem>
            <asp:ListItem>6</asp:ListItem>
        </asp:RadioButtonList>
     <asp:Label ID="Label4" runat="server" Font-Bold="true" Font-Size="X-Large" Text="Data obrony:"/>
-    <asp:Calendar ID="Kalendarz" runat="server"></asp:Calendar>
+    <asp:Calendar ID="Kalendarz" runat="server" SelectedDate="01/19/2020 20:13:19"></asp:Calendar>
     <br />
     <asp:Label ID="Label5" runat="server" Font-Bold="true" Font-Size="X-Large" Text="Nadany stopień:"/>
     <br />

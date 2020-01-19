@@ -5,8 +5,7 @@
     <asp:ListView ID="ListView1" runat="server" DataKeyNames="ID_pracownika" DataSourceID="ListaPracownikowDS" InsertItemPosition="LastItem">
         <AlternatingItemTemplate>
                 <tr style="background-color:white;color:#284775">
-                <td>
-                    <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Usuń" Height="25"/>
+                <td style="text-align:center">
                     <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Modyfikuj" Height="25"/>
                 </td>
                 <td style="text-align:center">
@@ -69,9 +68,8 @@
             </tr>
         </InsertItemTemplate>
         <ItemTemplate>
-                    <tr style="background-color:#F7F6F3;color: 333333; width:250px">
-                <td>
-                    <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Usuń" Height="25"/>
+                <tr style="background-color:#F7F6F3;color: 333333; width:250px">
+                <td style="text-align:center">
                     <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Modyfikuj" Height="25"/>
                 </td>
                 <td style="text-align:center">
@@ -113,7 +111,6 @@
         <SelectedItemTemplate>
             <tr style="background-color:#008A8C;font-weight: bold;color: #FFFFFF;">
                 <td>
-                    <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Usuń" />
                     <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Modyfikuj" />
                 </td>
                 <td>

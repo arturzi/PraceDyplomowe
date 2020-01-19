@@ -6,9 +6,8 @@
         <asp:ListView ID="ListView1" runat="server" DataKeyNames="ID_slowa" DataSourceID="SlowaKluczoweDS" InsertItemPosition="LastItem">
             <AlternatingItemTemplate>
                     <tr style="background-color:white;color:#284775">
-                    <td>
-                        <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Usuń" Height="20"/>
-                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Modyfikuj" Height="20"/>
+                    <td style="text-align:center">
+                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Modyfikuj" Height="25"/>
                     </td>
                     <td style="text-align:center">
                         <asp:Label ID="ID_slowaLabel" runat="server" Text='<%# Eval("ID_slowa") %>' />
@@ -21,8 +20,8 @@
             <EditItemTemplate>
                 <tr style="background-color:#008A8C;color: #FF0000;">
                     <td>
-                        <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Zapisz" Height="20"/>
-                        <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Anuluj" Height="20"/>
+                        <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Zapisz" Height="25"/>
+                        <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Anuluj" Height="25"/>
                     </td>
                     <td>
                         <asp:Label ID="ID_slowaLabel1" runat="server" Text='<%# Eval("ID_slowa") %>' />
@@ -42,8 +41,8 @@
             <InsertItemTemplate>
                 <tr style="">
                     <td>
-                        <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Zapisz" Height="20"/>
-                        <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Anuluj" Height="20"/>
+                        <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Zapisz" Height="25"/>
+                        <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Anuluj" Height="25"/>
                     </td>
                     <td>&nbsp;</td>
                     <td>
@@ -53,9 +52,8 @@
             </InsertItemTemplate>
             <ItemTemplate>
                     <tr style="background-color:#F7F6F3;color: 333333; width:250px">
-                    <td>
-                        <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Usuń" Height="20" />
-                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Modyfikuj" Height="20" />
+                    <td style="text-align:center">
+                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Modyfikuj" Height="25" />
                     </td>
                     <td style="text-align:center">
                         <asp:Label ID="ID_slowaLabel" runat="server" Text='<%# Eval("ID_slowa") %>' />
@@ -87,8 +85,7 @@
             </LayoutTemplate>
             <SelectedItemTemplate>
                 <tr style="background-color:#008A8C;font-weight: bold;color: #FFFFFF;">
-                    <td>
-                        <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Usuń" />
+                    <td style="text-align:center">
                         <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Modyfikuj" />
                     </td>
                     <td>

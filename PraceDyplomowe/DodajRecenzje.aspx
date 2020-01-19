@@ -9,18 +9,22 @@ WHERE (dbo.Recenzenci.ID_pracy = @ID_pracy)
             <asp:QueryStringParameter Name="ID_pracy" QueryStringField="ID_pracy" />
         </SelectParameters>
         </asp:SqlDataSource>
+    <br />
     <asp:Label ID="Label4" runat="server" Text="Wybierz recenzenta:"></asp:Label>
     <br />
     <asp:DropDownList ID="DDLRecenzent" runat="server" DataSourceID="DSRecenzje" DataTextField="Recenzent" DataValueField="ID_pracownika"></asp:DropDownList>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DDLRecenzent" ErrorMessage="Proszę wybrać recenzenta"></asp:RequiredFieldValidator>
     <br /><br />
     <asp:Label ID="Label3" runat="server" Text="Ocena recenzenta:"></asp:Label>
     <br />
-    <asp:RadioButtonList ID="RadioOcena" runat="server" Height="119px" Width="101px">
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="RadioOcena" ErrorMessage="proszę wybrać ocenę"></asp:RequiredFieldValidator>
+    <asp:RadioButtonList ID="RadioOcena" runat="server" Height="117px" Width="101px">
             <asp:ListItem>2</asp:ListItem>
             <asp:ListItem>3</asp:ListItem>
             <asp:ListItem>4</asp:ListItem>
             <asp:ListItem>5</asp:ListItem>
         </asp:RadioButtonList>
+    <br />
     <asp:Label ID="Label2" runat="server" Text="Komentarz recenzenta:"></asp:Label>
     <br />
     <asp:TextBox ID="TxtKomentarz" runat="server" Height="135px" Width="368px" TextMode="MultiLine"></asp:TextBox>
